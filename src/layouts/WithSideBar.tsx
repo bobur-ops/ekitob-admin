@@ -41,7 +41,7 @@ const WithSideBar: React.FC<WithSideBarProps> = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const admin = JSON.parse(localStorage.getItem("admin"));
+    const admin = JSON.parse(localStorage.getItem("admin") || "");
     if (!admin) {
       navigate(APP_ROUTES.SIGNIN);
     }
