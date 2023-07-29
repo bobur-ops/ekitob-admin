@@ -1,6 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Flex, Box, Image, useColorModeValue, Text } from "@chakra-ui/react";
-const BookItem = ({ book }) => {
-    return (_jsxs(Box, { bg: useColorModeValue("white", "gray.800"), maxW: "sm", borderWidth: "1px", rounded: "lg", shadow: "lg", position: "relative", h: "full", children: [_jsx(Box, { w: "full", h: 250, children: _jsx(Image, { src: book.icon, alt: `Picture of ${book.name}`, roundedTop: "lg", objectFit: "cover", objectPosition: "center", w: "full", h: "full" }) }), _jsxs(Box, { p: "6", children: [_jsx(Flex, { mt: "1", justifyContent: "space-between", alignContent: "center", children: _jsx(Box, { fontSize: "2xl", fontWeight: "semibold", as: "h4", lineHeight: "tight", isTruncated: true, children: book.name }) }), _jsxs(Flex, { justifyContent: "space-between", alignContent: "flex-end", children: [_jsxs(Text, { color: "gray.500", children: [book.description.slice(0, 100), "..."] }), _jsxs(Box, { fontSize: "2xl", height: "fit-content", color: useColorModeValue("gray.800", "white"), children: [_jsx(Box, { as: "span", color: "gray.600", fontSize: "lg", children: "\u00A3" }), book.price.toFixed(2)] })] })] })] }));
-};
-export default BookItem;
